@@ -1,11 +1,11 @@
 <h1 align="center">TransformationLayout</h1></br>
 <p align="center"> 
-🌠 Transform into a different view or activity using morphing animations using<a href="https://material.io/design/motion/the-motion-system.html" target="_blank"> Transformation motions </a> of new material version.
+🌠 Transform views, activity, and fragments into other components with container transform animations.
 </p>
 </br>
 
 <p align="center">
-  <a href="https://devlibrary.withgoogle.com/products/android/repos/skydoves-TransformationLayout"><img alt="Google" src="https://skydoves.github.io/badges/google-devlib.svg"/></a><br>
+  <a href="https://devlibrary.withgoogle.com/products/android/repos/skydoves-TransformationLayout"><img alt="Google" src="https://skydoves.github.io/badges/google-devlib.svg"/></a>
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
   <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
   <a href="https://github.com/skydoves/TransformationLayout/actions"><img alt="Build Status" src="https://github.com/skydoves/TransformationLayout/workflows/Android%20CI/badge.svg"/></a> 
@@ -23,36 +23,29 @@ Go to the [Releases](https://github.com/skydoves/TransformationLayout/releases) 
 </p>
 
 ## Morphing Animation for Jetpack Compose
-If you want to implement morphing in your Jetpack Compose project, check out [Orbitary](https://github.com/skydoves/Orbitary).
+If you want to implement morphing animation in Jetpack Compose, check out [Orbital](https://github.com/skydoves/Orbital).
 
 ## Including in your project
 [![Maven Central](https://img.shields.io/maven-central/v/com.github.skydoves/transformationlayout.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.skydoves%22%20AND%20a:%22transformationlayout%22)
-### Gradle 
-Add below codes to your **root** `build.gradle` file (not your module build.gradle file).
-```gradle
-allprojects {
-    repositories {
-        mavenCentral()
-    }
-}
-```
-And add a dependency code to your **module**'s `build.gradle` file.
+
+### Gradle
+Add the dependency below to your **module**'s `build.gradle` file:
+
 ```gradle
 dependencies {
-    implementation "com.github.skydoves:transformationlayout:1.1.1"
+    implementation("com.github.skydoves:transformationlayout:1.1.5")
 }
 ```
 
 ## Usage
-Add following XML namespace inside your XML layout file.
+Add the XML namespace below inside your XML layout file:
 
 ```gradle
 xmlns:app="http://schemas.android.com/apk/res-auto"
 ```
 
 ### TransformationLayout
-Here is a basic example of implementing `TransformationLayout`. <br>
-We must wrap one or more views that we want to transform.
+`TransformationLayout` is an essential concept to transform your Views, Activities, and Fragments into other components. You must wrap one or more Views that are supposed to be transformed using `TransformationLayout` like the example code below:
 
 ```gradle
 <com.skydoves.transformationlayout.TransformationLayout
@@ -66,13 +59,13 @@ We must wrap one or more views that we want to transform.
   app:transformation_pathMode="arc" // arc, linear
 >
 
-   <!-- other views -->
+   <!-- other complicated views -->
 
 </com.skydoves.transformationlayout.TransformationLayout>
 ```
 
 ### Transform into a view
-Here is a simple example of transform fab into a view.
+For instance, you can transform a floating button into a CardView as you've seen in the example below:
 
 <img src="https://user-images.githubusercontent.com/24237865/75549488-25321700-5a73-11ea-8908-609592907e84.gif" align="right" width="280"/>
 
@@ -101,15 +94,15 @@ Here is a simple example of transform fab into a view.
     app:cardBackgroundColor="@color/colorPrimary" />
 ```
 
-
 #### Bind a TargetView
-We can bind a targetView that will be transformed from the `TransformationLayout` using the below attribute in XML.<br>
-If you bind a targetView to the `TransformationLayout`, the targetView's visibility will be `GONE`.
+With the attribute below in your XML file, you can bind a `targetView` that should be transformed from the `TransformationLayout`. If you bind a targetView with a `TransformationLayout`, the targetView's visibility will be `GONE` by default.
 
 ```gradle
 app:transformation_targetView="@+id/myCardView"
 ```
-Or we can bind a targetView using method.
+
+You can also bind a targetView with a `TransformationLayout` using `bindTargetView` method like the code below:
+
 ```kotlin
 transformationLayout.bindTargetView(myCardView)
 ```

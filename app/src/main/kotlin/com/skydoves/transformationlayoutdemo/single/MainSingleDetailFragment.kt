@@ -35,7 +35,7 @@ class MainSingleDetailFragment : Fragment() {
   override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
-    savedInstanceState: Bundle?
+    savedInstanceState: Bundle?,
   ): View {
     _binding = ActivityDetailBinding.inflate(inflater, container, false)
     return binding.root
@@ -54,7 +54,6 @@ class MainSingleDetailFragment : Fragment() {
 
     val poster = arguments?.getParcelable<Poster>(posterKey)
     poster?.let {
-
       // [Step2]: sets a transition name to the target view.
       binding.detailContainer.transitionName = poster.name
 

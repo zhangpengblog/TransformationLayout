@@ -99,6 +99,7 @@ public final class com/skydoves/transformationlayout/TransformationLayout$Direct
 	public static final field AUTO Lcom/skydoves/transformationlayout/TransformationLayout$Direction;
 	public static final field ENTER Lcom/skydoves/transformationlayout/TransformationLayout$Direction;
 	public static final field RETURN Lcom/skydoves/transformationlayout/TransformationLayout$Direction;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public final fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lcom/skydoves/transformationlayout/TransformationLayout$Direction;
 	public static fun values ()[Lcom/skydoves/transformationlayout/TransformationLayout$Direction;
@@ -109,6 +110,7 @@ public final class com/skydoves/transformationlayout/TransformationLayout$FadeMo
 	public static final field IN Lcom/skydoves/transformationlayout/TransformationLayout$FadeMode;
 	public static final field OUT Lcom/skydoves/transformationlayout/TransformationLayout$FadeMode;
 	public static final field THROUGH Lcom/skydoves/transformationlayout/TransformationLayout$FadeMode;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public final fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lcom/skydoves/transformationlayout/TransformationLayout$FadeMode;
 	public static fun values ()[Lcom/skydoves/transformationlayout/TransformationLayout$FadeMode;
@@ -118,6 +120,7 @@ public final class com/skydoves/transformationlayout/TransformationLayout$FitMod
 	public static final field AUTO Lcom/skydoves/transformationlayout/TransformationLayout$FitMode;
 	public static final field HEIGHT Lcom/skydoves/transformationlayout/TransformationLayout$FitMode;
 	public static final field WIDTH Lcom/skydoves/transformationlayout/TransformationLayout$FitMode;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public final fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lcom/skydoves/transformationlayout/TransformationLayout$FitMode;
 	public static fun values ()[Lcom/skydoves/transformationlayout/TransformationLayout$FitMode;
@@ -126,6 +129,7 @@ public final class com/skydoves/transformationlayout/TransformationLayout$FitMod
 public final class com/skydoves/transformationlayout/TransformationLayout$Motion : java/lang/Enum {
 	public static final field ARC Lcom/skydoves/transformationlayout/TransformationLayout$Motion;
 	public static final field LINEAR Lcom/skydoves/transformationlayout/TransformationLayout$Motion;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public final fun getPathMotion ()Landroid/transition/PathMotion;
 	public static fun valueOf (Ljava/lang/String;)Lcom/skydoves/transformationlayout/TransformationLayout$Motion;
 	public static fun values ()[Lcom/skydoves/transformationlayout/TransformationLayout$Motion;
@@ -150,7 +154,7 @@ public final class com/skydoves/transformationlayout/TransformationLayout$Params
 	public final fun component9 ()Lcom/skydoves/transformationlayout/TransformationLayout$FitMode;
 	public final fun copy (JLcom/skydoves/transformationlayout/TransformationLayout$Motion;IIIILcom/skydoves/transformationlayout/TransformationLayout$Direction;Lcom/skydoves/transformationlayout/TransformationLayout$FadeMode;Lcom/skydoves/transformationlayout/TransformationLayout$FitMode;FFZZLjava/lang/String;)Lcom/skydoves/transformationlayout/TransformationLayout$Params;
 	public static synthetic fun copy$default (Lcom/skydoves/transformationlayout/TransformationLayout$Params;JLcom/skydoves/transformationlayout/TransformationLayout$Motion;IIIILcom/skydoves/transformationlayout/TransformationLayout$Direction;Lcom/skydoves/transformationlayout/TransformationLayout$FadeMode;Lcom/skydoves/transformationlayout/TransformationLayout$FitMode;FFZZLjava/lang/String;ILjava/lang/Object;)Lcom/skydoves/transformationlayout/TransformationLayout$Params;
-	public fun describeContents ()I
+	public final fun describeContents ()I
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getAllContainerColors ()I
 	public fun getContainerColor ()I
@@ -182,7 +186,15 @@ public final class com/skydoves/transformationlayout/TransformationLayout$Params
 	public final fun setTransitionName (Ljava/lang/String;)V
 	public fun setZOrder (I)V
 	public fun toString ()Ljava/lang/String;
-	public fun writeToParcel (Landroid/os/Parcel;I)V
+	public final fun writeToParcel (Landroid/os/Parcel;I)V
+}
+
+public final class com/skydoves/transformationlayout/TransformationLayout$Params$Creator : android/os/Parcelable$Creator {
+	public fun <init> ()V
+	public final fun createFromParcel (Landroid/os/Parcel;)Lcom/skydoves/transformationlayout/TransformationLayout$Params;
+	public synthetic fun createFromParcel (Landroid/os/Parcel;)Ljava/lang/Object;
+	public final fun newArray (I)[Lcom/skydoves/transformationlayout/TransformationLayout$Params;
+	public synthetic fun newArray (I)[Ljava/lang/Object;
 }
 
 public final class com/skydoves/transformationlayout/TransitionExtensionKt {
